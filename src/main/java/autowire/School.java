@@ -21,4 +21,12 @@ public class School {
     public void setEstb(int estb) {
         this.estb = estb;
     }
+
+    @Override
+    public String toString() {
+        return "School{" +
+                "sch_name='" + sch_name + '\'' +
+                ", estb=" + estb +
+                '}';
+    }
 }
