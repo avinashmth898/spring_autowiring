@@ -3,11 +3,17 @@ package autowire;
 public class Student {
     private int rollno;
     private String s_name;
-    School school;
-    public Student(int rollno, String s_name, School school){
+    private School school;
+    private Personal personal;
+    public Student(int rollno, String s_name, School school, Personal personal){
+        System.out.println("Inside constructor");
         this.rollno=rollno;
         this.s_name=s_name;
         this.school=school;
+        this.personal=personal;
+    }
+
+    public Student() {
     }
 
     public int getRollno() {
@@ -26,12 +32,27 @@ public class Student {
         this.s_name = s_name;
     }
 
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
+    }
+    public Personal getPersonal(){
+        return personal;
+    }
+    public void setPersonal(Personal personal){
+        this.personal=personal;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "rollno=" + rollno +
                 ", s_name='" + s_name + '\'' +
                 ", school=" + school +
+                ", personal=" + personal +
                 '}';
     }
 }

@@ -7,6 +7,10 @@ public class School {
         this.sch_name=sch_name;
         this.estb=estb;
     }
+
+    public School() {
+    }
+
     public void setSch_name(String sch_name){
         this.sch_name=sch_name;
     }

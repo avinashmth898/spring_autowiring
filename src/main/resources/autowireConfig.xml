@@ -9,14 +9,22 @@
        http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd" >
 
-    <bean class="autowire.School" name="school1">
-        <constructor-arg value="MS MPS" type="String" />
-        <constructor-arg value="2001" type="int" />
-    </bean>
-    <bean class="autowire.Student" name="student1">
-        <constructor-arg value="15" type="int" />
-        <constructor-arg value="Avinash Kumar" type="String" />
-        <constructor-arg ref="school1" />
+    <bean class="autowire.School" name="school" c:sch_name="MS MPS" c:estb="2001" />
+    <bean class="autowire.Personal" name="personal" c:age="26" c:height="183" c:skin_color="Brown" />
+<!--    <bean class="autowire.Personal" name="personal1" c:age="28" c:height="170" c:skin_color="Brown" />-->
+
+
+<!--    <bean class="autowire.Student" name="student1">-->
+<!--        <constructor-arg value="15" type="int" />-->
+<!--        <constructor-arg value="Avinash Kumar" type="String" />-->
+<!--        <constructor-arg ref="school" />-->
+<!--    </bean>-->
+<!--    byName-->
+<bean class="autowire.Student" name="student2" autowire="byName" p:s_name="Amitabh" p:rollno="4"/>
+    <bean class="autowire.Student" name="student3" autowire="byType" p:s_name="dev" p:rollno="89"/>
+    <bean class="autowire.Student" name="student4" autowire="constructor" >
+        <constructor-arg value="Sohan" type="String" />
+        <constructor-arg value="76" type="int" />
     </bean>
 
 </beans>
