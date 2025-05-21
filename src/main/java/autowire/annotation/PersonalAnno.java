@@ -1,6 +1,6 @@
 package autowire.annotation;
 
-public class Personal {
+public class PersonalAnno {
     private int height;
     private int age;
     private String skin_color;
@@ -22,8 +22,8 @@ public class Personal {
     public String getSkin_color(){
         return skin_color;
     }
-    public Personal(){}
-    public Personal(int age, int height, String skin_color){
+    public PersonalAnno(){}
+    public PersonalAnno(int age, int height, String skin_color){
         this.skin_color=skin_color;
         this.age=age;
         this.height=height;

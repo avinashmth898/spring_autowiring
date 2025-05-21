@@ -124,7 +124,8 @@ a. **@Autowired**
 
 we can simply apply autowired annotation at these three places.
 1. at Setter
-2. at variable
+2. at properties
 3. at constructor
 
 it depends upon the way are doing our dependency injection. 
+

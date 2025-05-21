@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd" >
+    <context:annotation-config/>
+
+    <bean class="autowire.annotation.SchoolAnno" name="schoolAnno" c:sch_name="MS MPS" c:estb="2001" />
+    <bean class="autowire.annotation.PersonalAnno" name="personalAnno" c:age="26" c:height="183" c:skin_color="Brown" />
+<!--        <bean class="autowire.annotation.PersonalAnno" name="personalAnno" c:age="28" c:height="170" c:skin_color="Brown" />-->
+
+
+    <!--    <bean class="autowire.Student" name="student1">-->
+    <!--        <constructor-arg value="15" type="int" />-->
+    <!--        <constructor-arg value="Avinash Kumar" type="String" />-->
+    <!--        <constructor-arg ref="school" />-->
+    <!--    </bean>-->
+    <!--    byName-->
+    <bean class="autowire.annotation.StudentAnno" name="studentAnno2" p:s_name="Avinash" p:rollno="15" />
+
+    <bean class="autowire.annotation.StudentAnno" name="studentAnno3" p:rollno="89" p:s_name="dev" />
+<!--    -->
+    <bean class="autowire.annotation.StudentAnno" name="studentAnno4" >
+<!--        <constructor-arg value="Sohan" type="String" index="1" name="s_name"/>-->
+<!--        <constructor-arg value="76" type="int" index="0" name="s_rollno"/>-->
+    </bean>
+
+</beans>

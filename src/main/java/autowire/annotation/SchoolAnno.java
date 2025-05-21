@@ -1,14 +1,14 @@
 package autowire.annotation;
 
-public class School {
+public class SchoolAnno {
     private String sch_name;
     private int estb;
-    School(String sch_name, int estb){
+    public SchoolAnno(String sch_name, int estb){
         this.sch_name=sch_name;
         this.estb=estb;
     }
 
-    public School() {
+    public SchoolAnno() {
     }
 
     public void setSch_name(String sch_name){
