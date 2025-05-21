@@ -120,5 +120,11 @@ If we call byaType: It'll check the type and can hold only one of it;s kind
 **Annotation:**
 
 modes
-a. @Autowired
+a. **@Autowired**
 
+we can simply apply autowired annotation at these three places.
+1. at Setter
+2. at variable
+3. at constructor
+
+it depends upon the way are doing our dependency injection. 
